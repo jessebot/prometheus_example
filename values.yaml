@@ -1,20 +1,24 @@
+---
+# You should update selfhosting4dogs.com to your own domain :)
+# Or don't. Roll with it and self host selfhosting4dogs.com :D
+
 prometheus:
   ingress:
     enabled: true
     ingressClassName: nginx
     hosts:
-      - 'prometheus.localhost'
+      - 'prometheus.selfhosting4dogs.com'
 
 alertmanager:
   ingress:
     enabled: true
     ingressClassName: nginx
     hosts:
-      - 'alertmanager.localhost'
+      - 'alertmanager.selfhosting4dogs.com'
 
 grafana:
   ingress:
     enabled: true
     ingressClassName: nginx
     hosts:
-      - 'grafana.localhost'
+      - 'grafana.selfhosting4dogs.com'
