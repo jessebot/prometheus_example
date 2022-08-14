@@ -22,17 +22,17 @@ helm dep update .
 # Adding the repo via Argo CD
 First you'll need to update the [./values.yaml](./values.yaml) host names to be your own host, or don't :shrug:
 
-Then, assuming you have argo CD up and running from the tutorial [here](https://github.com/jessebot/argo_vault_example), you can run:
+Then, assuming you have argo CD up and running from the tutorial [here](https://github.com/jessebot/argo-example), you can run:
 ```bash
-argocd repo add https://github.com/jessebot/prometheus_argo_example
+argocd repo add https://github.com/jessebot/prometheus_example
 ```
 
 Is the repo you have actually private? Try this (only with your private repo and not mine :P)
 ```bash
-argocd repo add git@github.com:jessebot/prometheus_argo_example.git --ssh-private-key-path ~/.ssh/id_rsa
+argocd repo add git@github.com:jessebot/prometheus_example.git --ssh-private-key-path ~/.ssh/id_rsa
 ```
 
 # Creating an Argo CD app from this repo
 ```bash
-argocd app create prometheus --repo git@github.com:jessebot/prometheus_argo_example.git --dest-namespace monitoring --dest-server https://kubernetes.default.svc --path . --sync-policy auto --sync-option CreateNamespace=true
+argocd app create prometheus --repo git@github.com:jessebot/prometheus_example.git --dest-namespace monitoring --dest-server https://kubernetes.default.svc --path . --sync-policy auto --sync-option CreateNamespace=true
 ```
