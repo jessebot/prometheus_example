@@ -34,5 +34,5 @@ argocd repo add git@github.com:jessebot/prometheus_argo_example.git --ssh-privat
 
 # Creating an Argo CD app from this repo
 ```bash
-argocd app create prometheus --repo git@github.com:jessebot/prometheus_argo_example.git --dest-namespace monitoring --dest-server https://kubernetes.default.svc --path . --sync-policy auto
+argocd app create prometheus --repo git@github.com:jessebot/prometheus_argo_example.git --dest-namespace monitoring --dest-server https://kubernetes.default.svc --path . --sync-policy auto --sync-option CreateNamespace=true
 ```
