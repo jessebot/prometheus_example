@@ -1,3 +1,5 @@
+## how the repo was set up
+
 The exact commands I ran to create this repo:
 
 ```bash
@@ -15,4 +17,12 @@ vim values.yml
 Finally we run this to create the additional files we need:
 ```bash
 helm dep update .
+```
+
+# Adding the repo via Argo CD
+First you'll need to update the [./values.yaml](./values.yaml) host names to be your own host, or don't :P
+
+Then, assuming you have argo CD up and running from the tutorial [here](https://github.com/jessebot/argo_vault_example), you can run:
+```bash
+argocd repo add https://github.com/jessebot/prometheus_argo_example
 ```
