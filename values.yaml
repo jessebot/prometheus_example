@@ -1,0 +1,20 @@
+prometheus:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - 'prometheus.localhost'
+
+alertmanager:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - 'alertmanager.localhost'
+
+grafana:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - 'grafana.localhost'
